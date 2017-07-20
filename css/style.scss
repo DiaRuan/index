@@ -1,4 +1,7 @@
 @import "common.scss";
+$pink:#f29ec2;
+$color:#3751cc;
+$color-w:#fff;
 %name-color{
   color: #7dffc3;
   background: -webkit-linear-gradient(135deg, #fff9b0, #7dffc3);
@@ -16,7 +19,7 @@ html,body{
   height: 100%;
 }
 body{
-  background: #3751cc;
+  background: $color;
   background: -webkit-linear-gradient(left,#5733ea, #4894ff 70%,#579dff);
   background: linear-gradient(90deg,#5733ea, #4894ff 70%,#579dff);
 }
@@ -36,19 +39,24 @@ body{
   .name{
     padding: 0.05rem 0;
     font-size: 0.42rem;
-    @extend %name-color;
+    color: $color-w;
   }
   .desc{
     margin: 0.1rem 0 0;
     font-size: 0.14rem;
-    color: #fff;
+    color: $color-w;
     text-align: center;
     span{
       display: inline-block;
       padding: 2px 10px;
       margin: 0 5px 10px;
-      border: 1px solid #fff;
+      border: 1px solid $color-w;
       border-radius: 2px;
+      cursor: pointer;
+      &:hover{
+        background: $color-w;
+        color: $color;
+      }
     }
   }
 }
